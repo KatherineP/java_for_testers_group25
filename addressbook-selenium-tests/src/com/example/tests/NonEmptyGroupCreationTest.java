@@ -1,7 +1,7 @@
 package com.example.tests;
 import org.testng.annotations.Test;
 
-public class GroupCreationTests extends TestBase{
+public class NonEmptyGroupCreationTest extends TestBase{
 
     @Test
     public void testNonEmptyGroupCreation() throws Exception {
@@ -9,7 +9,7 @@ public class GroupCreationTests extends TestBase{
         goToGroupsPage();
         initGroupCreation();
         GroupData group = new GroupData();
-        group.groupname = "group name";
+        group.groupName = "group name";
         group.header = "header 1";
         group.footer = "footer 1";
         fillGroupForm(group);
@@ -17,14 +17,5 @@ public class GroupCreationTests extends TestBase{
         returnToGroupPage();
     }
 
-    @Test
-    public void testEmptyGroupCreation() throws Exception {
-        openMainPage();
-        goToGroupsPage();
-        initGroupCreation();
-        fillGroupForm(new GroupData("", "", ""));
-        submitGroupCreation();
-        returnToGroupPage();
-    }
 
 }

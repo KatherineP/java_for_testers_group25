@@ -2,9 +2,7 @@ package com.example.tests;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 import java.util.concurrent.TimeUnit;
@@ -46,7 +44,7 @@ public class TestBase {
 
     protected void fillGroupForm(GroupData group) {
         driver.findElement(By.name("group_name")).clear();
-        driver.findElement(By.name("group_name")).sendKeys(group.groupname);
+        driver.findElement(By.name("group_name")).sendKeys(group.groupName);
         driver.findElement(By.name("group_header")).clear();
         driver.findElement(By.name("group_header")).sendKeys(group.header);
         driver.findElement(By.name("group_footer")).clear();
