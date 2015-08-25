@@ -2,6 +2,7 @@ package com.example.tests;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -34,6 +35,8 @@ public class TestBase {
         }
     }
 
+
+
     protected void returnToGroupPage() {
         driver.findElement(By.linkText("group page")).click();
     }
@@ -62,6 +65,42 @@ public class TestBase {
     protected void openMainPage() {
         driver.get(baseUrl + "/addressbookv4.1.4/");
     }
+
+
+
+    protected void returnToHomePage() {
+        driver.findElement(By.linkText("home page")).click();
+    }
+
+    protected void submitContactCreation() {
+        driver.findElement(By.name("submit")).click();
+    }
+
+    protected void fillContactForm(ContactData contactData) {
+        driver.findElement(By.name("firstname")).clear();
+        driver.findElement(By.name("firstname")).sendKeys(contactData.firstname);
+        driver.findElement(By.name("lastname")).clear();
+        driver.findElement(By.name("lastname")).sendKeys(contactData.lastname);
+        driver.findElement(By.name("address")).clear();
+        driver.findElement(By.name("address")).sendKeys(contactData.address);
+        driver.findElement(By.name("home")).clear();
+        driver.findElement(By.name("home")).sendKeys(contactData.home);
+        driver.findElement(By.name("mobile")).clear();
+        driver.findElement(By.name("mobile")).sendKeys(contactData.mobile);
+        driver.findElement(By.name("email")).clear();
+        driver.findElement(By.name("email")).sendKeys(contactData.email);
+        new Select(driver.findElement(By.name("bday"))).selectByVisibleText(contactData.bday);
+        new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText(contactData.bmonth);
+        driver.findElement(By.name("byear")).clear();
+        driver.findElement(By.name("byear")).sendKeys(contactData.byear);
+        new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.group);
+    }
+
+    protected void gotoNewContactPage() {
+        driver.findElement(By.linkText("add new")).click();
+    }
+
+
 
 
     private boolean isElementPresent(By by) {
