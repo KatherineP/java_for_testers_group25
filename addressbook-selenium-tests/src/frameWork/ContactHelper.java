@@ -1,6 +1,6 @@
 package frameWork;
 
-import com.example.tests.ContactData;
+import com.example.tests.ContactTests.ContactData;
 import org.openqa.selenium.By;
 
 public class ContactHelper extends HelperBase{
@@ -33,4 +33,23 @@ public class ContactHelper extends HelperBase{
     public void returnToHomePage() {
         click(By.linkText("home page"));
     }
+
+
+    public void deleteGroup(int index) {
+        selectAndEditContactByIndex(index);
+      click(By.xpath("(//input[@name='update'])[2]"));
+    }
+
+    public void initContactModification(int index) {
+        selectAndEditContactByIndex(index);
+    }
+
+    public void updateContactModification() {
+        click(By.xpath("//input[11]"));
+    }
+
+    private void selectAndEditContactByIndex(int index) {
+        click(By.xpath("//tr[" + index + "]/td[7]/a"));
+    }
+
 }

@@ -1,5 +1,6 @@
-package com.example.tests;
+package com.example.tests.GroupTests;
 
+import com.example.tests.TestBase;
 import org.testng.annotations.Test;
 
 /**
@@ -12,9 +13,6 @@ public class GroupRemovalTests extends TestBase {
         app.getNavigationHelper().openMainPage();
         app.getNavigationHelper().goToGroupsPage();
         app.getGroupHelper().deleteGroup(1);
-
-
-
         app.getGroupHelper().returnToGroupPage();
     }
 }

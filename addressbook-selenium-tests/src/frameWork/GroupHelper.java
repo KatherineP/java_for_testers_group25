@@ -1,6 +1,6 @@
 package frameWork;
 
-import com.example.tests.GroupData;
+import com.example.tests.GroupTests.GroupData;
 import org.openqa.selenium.By;
 
 public class GroupHelper extends  HelperBase{
@@ -30,8 +30,6 @@ public class GroupHelper extends  HelperBase{
         selectGroupByIndex(index);
         click(By.name("delete"));
     }
-
-
 
     public void initGroupModification(int index) {
         selectGroupByIndex(index);

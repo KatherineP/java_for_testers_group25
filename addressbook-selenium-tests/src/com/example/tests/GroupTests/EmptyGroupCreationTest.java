@@ -1,7 +1,8 @@
-package com.example.tests;
+package com.example.tests.GroupTests;
+import com.example.tests.TestBase;
 import org.testng.annotations.Test;
 
-public class EmptyGroupCreationTest extends TestBase{
+public class EmptyGroupCreationTest extends TestBase {
 
     @Test
     public void testEmptyGroupCreation() throws Exception {

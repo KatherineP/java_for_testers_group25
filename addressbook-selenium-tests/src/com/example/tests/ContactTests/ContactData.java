@@ -1,4 +1,4 @@
-package com.example.tests;
+package com.example.tests.ContactTests;
 
 public class ContactData {
     public String firstname;

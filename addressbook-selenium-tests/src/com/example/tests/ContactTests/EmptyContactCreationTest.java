@@ -1,8 +1,10 @@
-package com.example.tests;
+package com.example.tests.ContactTests;
 
+import com.example.tests.ContactTests.ContactData;
+import com.example.tests.TestBase;
 import org.testng.annotations.Test;
 
-public class EmptyContactCreationTest extends TestBase{
+public class EmptyContactCreationTest extends TestBase {
 
     @Test
     public void EmptyContactCreationTest() throws Exception {
