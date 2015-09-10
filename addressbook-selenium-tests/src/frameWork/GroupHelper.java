@@ -2,6 +2,10 @@ package frameWork;
 
 import com.example.tests.GroupTests.GroupData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GroupHelper extends  HelperBase{
     public GroupHelper(ApplicationManager manager){
@@ -41,6 +45,19 @@ public class GroupHelper extends  HelperBase{
     }
 
     private void selectGroupByIndex(int index) {
-        click(By.xpath("//input[@name='selected[]'][" + index + "]"));
+        click(By.xpath("//input[@name='selected[]'][" + (index + 1) + "]"));
+    }
+
+
+    public List<GroupData> getgroups() {
+        List<GroupData> groups = new ArrayList<GroupData>();
+        List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@name='selected[]']"));
+        for (WebElement checkbox : checkboxes){
+            GroupData group = new GroupData();
+            String title = checkbox.getAttribute("title");
+          group.groupName = title.substring("Select (".length(), title.length() - ")".length());
+            groups.add(group);
+        }
+        return groups;
     }
 }
