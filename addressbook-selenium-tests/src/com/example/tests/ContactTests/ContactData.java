@@ -1,6 +1,6 @@
 package com.example.tests.ContactTests;
 
-public class ContactData {
+public class ContactData implements Comparable<ContactData>{
     public String firstname;
     public String lastname;
     public String address;
@@ -29,5 +29,32 @@ public class ContactData {
         this.group = group;
     }
 
+    @Override
+    public String toString() {
+        return "ContactData{" +
+                "email='" + email + '\'' +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ContactData)) return false;
+
+        ContactData that = (ContactData) o;
+
+        if (email != null ? !email.equals(that.email) : that.email != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
+
+    @Override
+    public int compareTo(ContactData other) {
+        return this.email.compareTo(other.email);
+    }
 }

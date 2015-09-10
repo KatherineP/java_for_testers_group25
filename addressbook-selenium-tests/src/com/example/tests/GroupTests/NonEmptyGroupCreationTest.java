@@ -12,7 +12,7 @@ public class NonEmptyGroupCreationTest extends  TestBase{
             app.getNavigationHelper().openMainPage();
             app.getNavigationHelper().goToGroupsPage();
             //save old state
-            List<GroupData> oldList = app.getGroupHelper().getgroups();
+            List<GroupData> oldList = app.getGroupHelper().getGroups();
             //actions
             app.getGroupHelper().initGroupCreation();
 
@@ -20,7 +20,7 @@ public class NonEmptyGroupCreationTest extends  TestBase{
             app.getGroupHelper().submitGroupCreation();
             app.getGroupHelper().returnToGroupPage();
             //save new state
-            List<GroupData> newList = app.getGroupHelper().getgroups();
+            List<GroupData> newList = app.getGroupHelper().getGroups();
             //compare states
             oldList.add(group);
             Collections.sort(oldList);

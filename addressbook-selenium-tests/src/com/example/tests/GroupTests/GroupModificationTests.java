@@ -18,7 +18,7 @@ public class GroupModificationTests extends TestBase {
         app.getNavigationHelper().openMainPage();
         app.getNavigationHelper().goToGroupsPage();
         //save old state
-        List<GroupData> oldList = app.getGroupHelper().getgroups();
+        List<GroupData> oldList = app.getGroupHelper().getGroups();
         Random rnd = new Random();
         int index = rnd.nextInt(oldList.size() - 1);
 
@@ -29,7 +29,7 @@ public class GroupModificationTests extends TestBase {
         app.getGroupHelper().returnToGroupPage();
 
         //save new state
-        List <GroupData> newList = app.getGroupHelper().getgroups();
+        List <GroupData> newList = app.getGroupHelper().getGroups();
         //compare states
         oldList.remove(index);
         oldList.add(group);

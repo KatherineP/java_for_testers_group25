@@ -2,6 +2,10 @@ package frameWork;
 
 import com.example.tests.ContactTests.ContactData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactHelper extends HelperBase{
 
@@ -52,4 +56,18 @@ public class ContactHelper extends HelperBase{
         click(By.xpath("//tr[" + index + "]/td[7]/a"));
     }
 
+
+    public List<ContactData> getContacts() {
+        List<ContactData> contacts = new ArrayList<ContactData>();
+        List<WebElement> checkboxes =  driver.findElements(By.name("selected[]"));
+
+        for (WebElement checkbox : checkboxes){
+            ContactData contact = new ContactData();
+            String accept = checkbox.getAttribute("accept");
+            contact.email= accept.substring(accept.length());
+            contacts.add(contact);
+        }
+
+        return contacts;
+    }
 }
