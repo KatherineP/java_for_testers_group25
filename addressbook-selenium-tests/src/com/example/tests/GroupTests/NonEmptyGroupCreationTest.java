@@ -15,7 +15,6 @@ public class NonEmptyGroupCreationTest extends  TestBase{
             List<GroupData> oldList = app.getGroupHelper().getGroups();
             //actions
             app.getGroupHelper().initGroupCreation();
-
             app.getGroupHelper().fillGroupForm(group);
             app.getGroupHelper().submitGroupCreation();
             app.getGroupHelper().returnToGroupPage();

@@ -3,7 +3,6 @@ package com.example.tests.ContactTests;
         import com.example.tests.TestBase;
         import org.testng.annotations.Test;
         import static org.testng.Assert.assertEquals;
-
         import java.util.Collections;
         import java.util.List;
 
