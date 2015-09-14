@@ -43,18 +43,20 @@ public class ContactData implements Comparable<ContactData>{
 
         ContactData that = (ContactData) o;
 
-        if (email != null ? !email.equals(that.email) : that.email != null) return false;
+        if (!email.equals(that.email)) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        return 0;
+        return email.hashCode();
     }
+
 
     @Override
     public int compareTo(ContactData other) {
-        return this.email.compareTo(other.email);
+        return this.email.toLowerCase().compareTo(other.email.toLowerCase());
+
     }
 }

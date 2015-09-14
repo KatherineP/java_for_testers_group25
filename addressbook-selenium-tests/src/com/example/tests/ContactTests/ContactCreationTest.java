@@ -13,6 +13,7 @@ public class ContactCreationTest extends TestBase {
         app.getNavigationHelper().openMainPage();
         //save old state
        List<ContactData> oldList = app.getContactHelper().getContacts();
+
         //actions
         app.getContactHelper().gotoNewContactPage();
         ContactData contact = new ContactData();
@@ -21,7 +22,7 @@ public class ContactCreationTest extends TestBase {
         contact.address = "address";
         contact.mobile = "1234567891";
         contact.home = "home";
-        contact.email = "test@test.test";
+        contact.email = "new@test.test";
         contact.bday = "23";
         contact.bmonth = "June";
         contact.byear = "1989";
@@ -33,11 +34,10 @@ public class ContactCreationTest extends TestBase {
         //save new state
         List<ContactData> newList = app.getContactHelper().getContacts();
         //compare states
-
         oldList.add(contact);
         Collections.sort(oldList);
+        Collections.sort(newList);
         assertEquals(newList, oldList);
-
     }
 
 
