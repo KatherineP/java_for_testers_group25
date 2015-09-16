@@ -3,7 +3,6 @@ package frameWork;
 import com.example.tests.ContactTests.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,21 +52,37 @@ public class ContactHelper extends HelperBase{
     }
 
     private void selectAndEditContactByIndex(int index) {
-        click(By.xpath("//tr[" + index + "]/td[7]/a"));
+            click(By.xpath("//tr[@name='entry'][" + (index + 1) + "]/td/a/img[@title='Edit']"));  // почему тут нужно писать (index + 1)? а не просто index.
     }
-
 
     public List<ContactData> getContacts() {
         List<ContactData> contacts = new ArrayList<ContactData>();
-        List<WebElement> checkboxes =  driver.findElements(By.name("selected[]"));
+        List<WebElement> rows =  getContactRows();
 
-        for (WebElement checkbox : checkboxes){
+        for (WebElement row : rows){
+            List<WebElement> columns =row.findElements(By.tagName("td"));
             ContactData contact = new ContactData();
-            String accept = checkbox.getAttribute("accept");
-            contact.email= accept;
+            contact.email=columns.get(3).getText();
             contacts.add(contact);
         }
-
         return contacts;
     }
+
+    private List<WebElement> getContactRows() {      //находим строки
+        return driver.findElements(By.name("entry"));
+    }
+
+//    public List<ContactData> getContacts() {
+//        List<ContactData> contacts = new ArrayList<ContactData>();
+//        List<WebElement> checkboxes =  driver.findElements(By.name("selected[]"));
+//
+//        for (WebElement checkbox : checkboxes){
+//            ContactData contact = new ContactData();
+//            String accept = checkbox.getAttribute("accept");
+//            contact.email= accept;
+//            contacts.add(contact);
+//        }
+//
+//        return contacts;
+//    }
 }
