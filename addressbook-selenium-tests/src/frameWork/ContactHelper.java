@@ -30,11 +30,9 @@ public class ContactHelper extends HelperBase{
     }
 
     private void rebuildCache() {
-        List<ContactData> cachedContacts = new ArrayList<ContactData>();
+       cachedContacts = new SortedListOf<ContactData>();
         manager.navigateTo().mainPage();
-
         List<WebElement> rows = getContactRows();
-
         for (WebElement row : rows) {
             List<WebElement> columns = row.findElements(By.tagName("td"));
             String email = columns.get(3).getText();
@@ -125,7 +123,7 @@ public class ContactHelper extends HelperBase{
 
     private void selectAndEditContactByIndex(int index) {
             click(By.xpath("//tr[@name='entry'][" + (index + 1) + "]/td/a/img[@title='Edit']"));  // почему тут нужно писать (index + 1)? а не просто index.
-
+        cachedContacts = null;
     }
 
     private List<WebElement> getContactRows() {      //находим строки
