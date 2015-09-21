@@ -34,11 +34,10 @@ public class TestBase {
 
         for (int i = 0; i < 5; i++) {
 
-            GroupData group = new GroupData();
-
-            group.groupName = generateRandomString();
-            group.header = generateRandomString();
-            group.footer = generateRandomString();
+            GroupData group = new GroupData()
+                    .withGroupName(generateRandomString())
+                    .withHeader(generateRandomString())
+                    .withFooter(generateRandomString());
             list.add(new Object[]{group});
         }
         return list.iterator();
@@ -50,14 +49,15 @@ public class TestBase {
         List<Object[]> list = new ArrayList<Object[]>();
 
         for (int i = 0; i < 3; i++) {
-            ContactData contact = new ContactData();
-            contact.firstname = generateRandomString();
-            contact.lastname = generateRandomString();
-            contact.address = generateRandomString();
-            contact.email = generateRandomEmail();
-            contact.bday = generateRandomDay();
-            contact.bmonth = generateRandomMonth();
-            contact.byear = generateRandomYear();
+
+            ContactData contact = new ContactData()
+                    .withFirstname(generateRandomString())
+                    .withLastname(generateRandomString())
+                    .withAddress(generateRandomString())
+                    .withEmail(generateRandomEmail())
+                    .withBday(generateRandomDay())
+                    .withBmonth(generateRandomMonth())
+                    .withByear(generateRandomYear());
             //contact.group = "";
             list.add(new Object[]{contact});
         }
@@ -116,6 +116,8 @@ public class TestBase {
             return s;
         }
     }
+
+
 
 
 }

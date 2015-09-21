@@ -2,7 +2,6 @@ package com.example.tests.ContactTests;
 
 import com.example.tests.TestBase;
 import org.testng.annotations.Test;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -14,8 +13,6 @@ public class ContactRemovalTests extends TestBase {
 
     @Test
     public void deleteSomeContact() {
-
-            app.getNavigationHelper().openMainPage();
             //save old state
             List<ContactData> oldList = app.getContactHelper().getContacts();
 
@@ -23,8 +20,8 @@ public class ContactRemovalTests extends TestBase {
             int index = rnd.nextInt(oldList.size() - 1);
 
             //actions
-            app.getContactHelper().deleteGroup(index);
-            app.getContactHelper().returnToHomePage();
+            app.getContactHelper().removeContact(index);
+
 
             //save new state
             List<ContactData> newList = app.getContactHelper().getContacts();
