@@ -61,7 +61,7 @@ public class ContactHelper extends HelperBase{
     public ContactHelper modifyContact(Integer index, ContactData contact) {
         manager.navigateTo().mainPage();
         initContactModification(index);
-        fillContactForm(contact, ContactHelper.MODIFICATION);
+        fillContactForm(contact, true);
         updateContactModification();
         returnToHomePage();
         rebuildCache();
