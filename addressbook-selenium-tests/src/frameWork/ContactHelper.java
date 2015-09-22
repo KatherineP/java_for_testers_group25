@@ -1,7 +1,6 @@
 package frameWork;
 
 import com.example.tests.ContactTests.ContactData;
-import com.example.utils.SortedListOf;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
@@ -12,25 +11,21 @@ public class ContactHelper extends HelperBase{
     public static boolean CREATION = true;
     public static boolean MODIFICATION = false;
 
-
     public ContactHelper(ApplicationManager manager) {
         super(manager);
     }
 
+    private List<ContactData> cachedContacts;
 
 
-    private SortedListOf<ContactData> cachedContacts;
-
-
-    public SortedListOf<ContactData> getContacts() {
+    public List<ContactData> getContacts() {
         if (cachedContacts == null){
             rebuildCache();
-        } return  cachedContacts;
-
+        } return  new ArrayList<ContactData>(cachedContacts);
     }
 
     private void rebuildCache() {
-       cachedContacts = new SortedListOf<ContactData>();
+       cachedContacts = new ArrayList<ContactData>();
         manager.navigateTo().mainPage();
         List<WebElement> rows = getContactRows();
         for (WebElement row : rows) {
@@ -111,7 +106,6 @@ public class ContactHelper extends HelperBase{
         return this;
     }
 
-
     public void initContactModification(int index) {
         selectAndEditContactByIndex(index);
     }
@@ -129,7 +123,5 @@ public class ContactHelper extends HelperBase{
     private List<WebElement> getContactRows() {      //находим строки
         return driver.findElements(By.name("entry"));
     }
-
-
 
 }
