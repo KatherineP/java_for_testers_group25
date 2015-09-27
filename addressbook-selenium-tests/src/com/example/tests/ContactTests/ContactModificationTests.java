@@ -1,6 +1,7 @@
 package com.example.tests.ContactTests;
 
 import com.example.tests.TestBase;
+import com.example.utils.SortedListOf;
 import org.testng.annotations.Test;
 import java.util.Collections;
 import java.util.List;
@@ -13,7 +14,7 @@ public class ContactModificationTests extends TestBase {
     @Test (dataProvider = "randomValidContactsGenerator")
     public void modifySomeContact(ContactData contact){
         //save old state
-        List<ContactData> oldList = app.getContactHelper().getContacts();
+        SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
 
         Random rnd = new Random();
         int index = rnd.nextInt(oldList.size() - 1);
@@ -23,12 +24,10 @@ public class ContactModificationTests extends TestBase {
 
 
         //save new state
-        List<ContactData> newList = app.getContactHelper().getContacts();
+        SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
         //compare states
         oldList.remove(index);
         oldList.add(contact);
-        Collections.sort(oldList);
-        Collections.sort(newList);
         assertEquals(newList, oldList);
     }
 }

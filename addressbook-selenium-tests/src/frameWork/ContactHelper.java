@@ -1,6 +1,7 @@
 package frameWork;
 
 import com.example.tests.ContactTests.ContactData;
+import com.example.utils.SortedListOf;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
@@ -15,23 +16,25 @@ public class ContactHelper extends HelperBase{
         super(manager);
     }
 
-    private List<ContactData> cachedContacts;
+    private SortedListOf<ContactData> cachedContacts;
 
 
-    public List<ContactData> getContacts() {
+    public SortedListOf<ContactData> getContacts() {
         if (cachedContacts == null){
             rebuildCache();
-        } return  new ArrayList<ContactData>(cachedContacts);
+        } return  new SortedListOf<ContactData>(cachedContacts);
     }
 
     private void rebuildCache() {
-       cachedContacts = new ArrayList<ContactData>();
+       cachedContacts = new SortedListOf<ContactData>();
         manager.navigateTo().mainPage();
         List<WebElement> rows = getContactRows();
         for (WebElement row : rows) {
             List<WebElement> columns = row.findElements(By.tagName("td"));
-            String email = columns.get(3).getText();
-            cachedContacts.add(new ContactData().withEmail(email));
+            String firstname = columns.get(1).getText();
+            String lastname = columns.get(2).getText();
+            String ID = row.getAttribute("id");
+            cachedContacts.add(new ContactData().withFirstname(firstname).withLastname(lastname).withID(ID));
         }
     }
 

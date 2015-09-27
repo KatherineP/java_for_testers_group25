@@ -2,6 +2,7 @@ package com.example.tests.ContactTests;
 
 public class ContactData implements Comparable<ContactData>{
     private String firstname;
+    private String ID;
     private String lastname;
     private String address;
     private String home;
@@ -16,25 +17,26 @@ public class ContactData implements Comparable<ContactData>{
 
     }
 
-    public ContactData(String firstname, String lastname, String address, String home, String mobile, String email, String bday, String bmonth, String byear, String group) {
+    public ContactData(String firstname, String group, String byear, String bday, String email, String home, String lastname, String ID, String address, String mobile, String bmonth) {
         this.firstname = firstname;
-        this.lastname = lastname;
-        this.address = address;
-        this.home = home;
-        this.mobile = mobile;
-        this.email = email;
-        this.bday = bday;
-        this.bmonth = bmonth;
-        this.byear = byear;
         this.group = group;
+        this.byear = byear;
+        this.bday = bday;
+        this.email = email;
+        this.home = home;
+        this.lastname = lastname;
+        this.ID = ID;
+        this.address = address;
+        this.mobile = mobile;
+        this.bmonth = bmonth;
     }
-
-
 
     @Override
     public String toString() {
         return "ContactData{" +
-                "email='" + email + '\'' +
+                "firstname='" + firstname + '\'' +
+                ", ID='" + ID + '\'' +
+                ", lastname='" + lastname + '\'' +
                 '}';
     }
 
@@ -45,21 +47,19 @@ public class ContactData implements Comparable<ContactData>{
 
         ContactData that = (ContactData) o;
 
-        if (!email.equals(that.email)) return false;
+        if (!ID.equals(that.ID)) return false;
+        if (!firstname.equals(that.firstname)) return false;
+        if (!lastname.equals(that.lastname)) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        return email.hashCode();
-    }
-
-
-    @Override
-    public int compareTo(ContactData other) {
-        return this.email.toLowerCase().compareTo(other.email.toLowerCase());
-
+        int result = firstname.hashCode();
+        result = 31 * result + ID.hashCode();
+        result = 31 * result + lastname.hashCode();
+        return result;
     }
 
     public ContactData withFirstname (String firstname){
@@ -67,6 +67,10 @@ public class ContactData implements Comparable<ContactData>{
         return this;
     }
 
+    public ContactData withID (String ID){
+        this.ID = ID;
+        return this;
+    }
     public ContactData withLastname (String lastname){
         this.lastname = lastname;
         return this;
@@ -104,6 +108,9 @@ public class ContactData implements Comparable<ContactData>{
         return group;
     }
 
+    public String getID() {
+        return ID;
+    }
 
     public String getByear() {
         return byear;
@@ -140,4 +147,15 @@ public class ContactData implements Comparable<ContactData>{
         return lastname;
     }
 
+
+
+
+    @Override
+    public int compareTo(ContactData other) {
+        //return this.lastname.toLowerCase().compareTo(other.lastname.toLowerCase());
+
+        if (this.ID == null) return 1;
+        if (other.ID == null) return -1;
+        return this.ID.compareTo(other.ID);
+    }
 }
