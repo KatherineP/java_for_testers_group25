@@ -112,6 +112,10 @@ public class ContactData implements Comparable<ContactData>{
         return ID;
     }
 
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
     public String getByear() {
         return byear;
     }
