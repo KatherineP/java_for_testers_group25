@@ -47,10 +47,17 @@ public class ContactData implements Comparable<ContactData>{
 
         ContactData that = (ContactData) o;
 
-        if (!ID.equals(that.ID)) return false;
-        if (!firstname.equals(that.firstname)) return false;
-        if (!lastname.equals(that.lastname)) return false;
+        if (ID != null && that.ID != null) {
+            if (!ID.equals(that.ID)) {
+                return false;
+            }
+//            if (firstname != null && that.firstname != null && !firstname.equals(that.firstname)) return false;
+//            if (lastname != null && that.lastname != null && !lastname.equals(that.lastname)) return false;
+            if (!firstname.equals(that.firstname)) return false;
+            if (!lastname.equals(that.lastname)) return false;
 
+
+        }
         return true;
     }
 
@@ -156,10 +163,9 @@ public class ContactData implements Comparable<ContactData>{
 
     @Override
     public int compareTo(ContactData other) {
-        //return this.lastname.toLowerCase().compareTo(other.lastname.toLowerCase());
-
         if (this.ID == null) return 1;
         if (other.ID == null) return -1;
-        return this.ID.compareTo(other.ID);
+        return Integer.valueOf(this.ID).compareTo(Integer.valueOf(other.ID));
+
     }
 }
