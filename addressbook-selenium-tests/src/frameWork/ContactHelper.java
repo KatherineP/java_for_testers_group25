@@ -31,8 +31,8 @@ public class ContactHelper extends HelperBase{
         List<WebElement> rows = getContactRows();
         for (WebElement row : rows) {
             List<WebElement> columns = row.findElements(By.tagName("td"));
-            String firstname = columns.get(1).getText();
-            String lastname = columns.get(2).getText();
+            String firstname = columns.get(2).getText();
+            String lastname = columns.get(1).getText();
             //String ID = row.getAttribute("id");
             String ID = columns.get(0).findElement(By.tagName("input")).getAttribute("value");
             cachedContacts.add(new ContactData().withFirstname(firstname).withLastname(lastname).withID(ID));
