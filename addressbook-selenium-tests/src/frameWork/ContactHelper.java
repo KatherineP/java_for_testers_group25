@@ -16,30 +16,30 @@ public class ContactHelper extends HelperBase{
         super(manager);
     }
 
-    private SortedListOf<ContactData> cachedContacts;
+    private List<ContactData> cachedContacts;
 
 
-    public SortedListOf<ContactData> getContacts() {
+    public List<ContactData> getContacts() {
         if (cachedContacts == null){
             rebuildCache();
-        } return  new SortedListOf<ContactData>(cachedContacts);
+        } return  new ArrayList<ContactData>(cachedContacts);
     }
 
     private void rebuildCache() {
-       cachedContacts = new SortedListOf<ContactData>();
+       cachedContacts = new ArrayList<ContactData>();
         manager.navigateTo().mainPage();
         List<WebElement> rows = getContactRows();
         for (WebElement row : rows) {
             List<WebElement> columns = row.findElements(By.tagName("td"));
-            String firstname = columns.get(2).getText();
-            String lastname = columns.get(1).getText();
+            String firstname = columns.get(1).getText();
+            String lastname = columns.get(2).getText();
             //String ID = row.getAttribute("id");
             String ID = columns.get(0).findElement(By.tagName("input")).getAttribute("value");
             cachedContacts.add(new ContactData().withFirstname(firstname).withLastname(lastname).withID(ID));
         }
     }
 
-    public ContactHelper createContact(ContactData contact, Boolean CREATION) {
+    public ContactHelper createContact(ContactData contact) {
         manager.navigateTo().mainPage();
         gotoNewContactPage();
         fillContactForm(contact, CREATION);
@@ -76,7 +76,7 @@ public class ContactHelper extends HelperBase{
     public void submitContactDelition(int index) {
         selectAndEditContactByIndex(index);
         click(By.xpath("(//input[@name='update'])[2]"));
-        cachedContacts = null;
+        //cachedContacts = null;
     }
 
     public ContactHelper fillContactForm(ContactData contactData, boolean formType) {
@@ -116,12 +116,12 @@ public class ContactHelper extends HelperBase{
 
     public void updateContactModification() {
         click(By.xpath("//input[11]"));
-        cachedContacts = null;
+        //cachedContacts = null;
     }
 
     private void selectAndEditContactByIndex(int index) {
             click(By.xpath("//tr[@name='entry'][" + (index + 1) + "]/td/a/img[@title='Edit']"));  // почему тут нужно писать (index + 1)? а не просто index.
-        cachedContacts = null;
+        //cachedContacts = null;
     }
 
     private List<WebElement> getContactRows() {      //находим строки
