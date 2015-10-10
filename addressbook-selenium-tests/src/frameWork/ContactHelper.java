@@ -1,7 +1,6 @@
 package frameWork;
 
 import com.example.tests.ContactTests.ContactData;
-import com.example.utils.SortedListOf;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import java.util.ArrayList;

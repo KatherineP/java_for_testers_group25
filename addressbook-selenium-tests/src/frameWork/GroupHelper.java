@@ -1,12 +1,9 @@
 package frameWork;
 
 import com.example.tests.GroupTests.GroupData;
-import com.example.utils.ListOf;
 import com.example.utils.SortedListOf;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class GroupHelper extends  HelperBase{

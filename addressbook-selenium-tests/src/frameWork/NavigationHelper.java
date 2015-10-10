@@ -12,7 +12,6 @@ public class NavigationHelper extends  HelperBase {
         if (!onMainPage()) {
             click(By.linkText("home"));
         }
-
     }
 
     private boolean onMainPage() {
@@ -33,7 +32,5 @@ public class NavigationHelper extends  HelperBase {
         } else {
             return false;
         }
-
-
     }
 }

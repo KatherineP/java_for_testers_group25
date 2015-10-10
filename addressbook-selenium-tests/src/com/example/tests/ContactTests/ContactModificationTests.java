@@ -11,7 +11,6 @@ import static org.testng.Assert.assertEquals;
 public class ContactModificationTests extends TestBase {
     @Test (dataProvider = "randomValidContactsGenerator")
     public void modifySomeContact(ContactData contact){
-        //save old state
         List<ContactData> oldList = app.getContactHelper().getContacts();
 
         Random rnd = new Random();
@@ -21,8 +20,6 @@ public class ContactModificationTests extends TestBase {
         contact.setID(oldList.get(index).getID());
         app.getContactHelper().modifyContact(index, contact);
 
-
-        //save new state
         List<ContactData> newList = app.getContactHelper().getContacts();
         //compare states
         oldList.remove(index);

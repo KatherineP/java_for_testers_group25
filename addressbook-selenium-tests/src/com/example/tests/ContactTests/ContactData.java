@@ -55,8 +55,6 @@ public class ContactData implements Comparable<ContactData>{
 //            if (lastname != null && that.lastname != null && !lastname.equals(that.lastname)) return false;
             if (!firstname.equals(that.firstname)) return false;
             if (!lastname.equals(that.lastname)) return false;
-
-
         }
         return true;
     }
@@ -157,9 +155,6 @@ public class ContactData implements Comparable<ContactData>{
     public String getLastname() {
         return lastname;
     }
-
-
-
 
     @Override
     public int compareTo(ContactData other) {

@@ -9,11 +9,9 @@ public class NonEmptyGroupCreationTest extends  TestBase{
 
         @Test(dataProvider = "randomValidGroupsGenerator")
         public void GroupCreationWithValidData (GroupData group)throws Exception {
-            //save old state
             SortedListOf<GroupData> oldList = app.getGroupHelper().getGroups();
             //actions
             app.getGroupHelper().createGroup(group);
-            //save new state
             SortedListOf<GroupData> newList = app.getGroupHelper().getGroups();
             //compare states
             assertThat(newList, equalTo(oldList.withAdded(group)));

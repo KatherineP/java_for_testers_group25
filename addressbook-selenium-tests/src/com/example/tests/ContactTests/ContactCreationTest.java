@@ -1,9 +1,6 @@
 package com.example.tests.ContactTests;
 
 import com.example.tests.TestBase;
-        import static frameWork.ContactHelper.CREATION;
-
-import com.example.utils.SortedListOf;
 import org.testng.annotations.Test;
         import static org.testng.Assert.assertEquals;
         import java.util.*;
@@ -27,6 +24,7 @@ public class ContactCreationTest extends TestBase {
         Collections.sort(oldList);
         Collections.sort(newList);
         assertEquals(newList, oldList);
+
     }
 
 
