@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="xstream-1.4.8">
+    <CLASSES>
+      <root url="jar://C:/Selenium and Java/xstream-1.4.8/lib/xstream-1.4.8.jar!/" />
+      <root url="jar://C:/Selenium and Java/xstream-1.4.8/lib/xstream-benchmark-1.4.8.jar!/" />
+      <root url="jar://C:/Selenium and Java/xstream-1.4.8/lib/xstream-hibernate-1.4.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

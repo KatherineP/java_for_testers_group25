@@ -2,6 +2,7 @@ package com.example.tests;
 
 import com.example.tests.ContactTests.ContactData;
 import com.example.tests.GroupTests.GroupData;
+import static com.example.tests.GroupTests.GroupDataGenerator.generateRandomGroups;
 import frameWork.ApplicationManager;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -30,17 +31,15 @@ public class TestBase {
 
     @DataProvider
     public Iterator<Object[]> randomValidGroupsGenerator() {
+        return wrapGropsForDataProvider(generateRandomGroups(5)).iterator();
+    }
+
+    public static List<Object[]> wrapGropsForDataProvider(List<GroupData> groups) {
         List<Object[]> list = new ArrayList<Object[]>();
-
-        for (int i = 0; i < 5; i++) {
-
-            GroupData group = new GroupData()
-                    .withGroupName(generateRandomString())
-                    .withHeader(generateRandomString())
-                    .withFooter(generateRandomString());
+        for(GroupData group : groups ){
             list.add(new Object[]{group});
         }
-        return list.iterator();
+        return list;
     }
 
 
