@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import static com.example.tests.GroupTests.GroupDataGenerator.loadGroupsFromCsvFile;
+import static com.example.tests.GroupTests.GroupDataGenerator.loadGroupsFromXmlFile;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -15,8 +16,8 @@ public class NonEmptyGroupCreationTest extends  TestBase{
 
     @DataProvider
     public Iterator<Object[]> groupsFromFile() throws IOException {
-        return wrapGropsForDataProvider(loadGroupsFromCsvFile(new File("groups.txt"))).iterator();
-        //return wrapGropsForDataProvider(loadGroupsFromXmlFile(new File("groups.xml"))).iterator();
+        //return wrapGropsForDataProvider(loadGroupsFromCsvFile(new File("groups.txt"))).iterator();
+        return wrapGropsForDataProvider(loadGroupsFromXmlFile(new File("groups.xml"))).iterator();
     }
 
 
