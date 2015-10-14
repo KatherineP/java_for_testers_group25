@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf1ac3a6-6913-44f2-a098-75195f8cac5d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/tests/GroupTests/GroupDataGenerator.java" afterPath="$PROJECT_DIR$/src/com/example/tests/GroupTests/GroupDataGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/tests/GroupTests/NonEmptyGroupCreationTest.java" afterPath="$PROJECT_DIR$/src/com/example/tests/GroupTests/NonEmptyGroupCreationTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groups.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="addressbook-selenium-tests.iws" />
@@ -1000,7 +999,7 @@
       <workItem from="1444384746537" duration="8569000" />
       <workItem from="1444464097223" duration="6955000" />
       <workItem from="1444640200304" duration="4857000" />
-      <workItem from="1444815426965" duration="2062000" />
+      <workItem from="1444815426965" duration="2127000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1440156216504</created>
@@ -1128,11 +1127,17 @@
       <option name="project" value="LOCAL" />
       <updated>1444645286920</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="xml update1">
+      <created>1444817504183</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1444817504183</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150898000" />
+    <option name="totallyTimeSpent" value="150963000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1220,7 +1225,8 @@
     <MESSAGE value="HW 39" />
     <MESSAGE value="xml" />
     <MESSAGE value="xml update" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml update" />
+    <MESSAGE value="xml update1" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml update1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
