@@ -80,6 +80,11 @@ public class ContactData implements Comparable<ContactData>{
         this.lastname = lastname;
         return this;
     }
+
+    public ContactData withHome (String home){
+        this.home = home;
+        return this;
+    }
     public ContactData withAddress(String address){
         this.address = address;
         return this;
@@ -87,6 +92,10 @@ public class ContactData implements Comparable<ContactData>{
 
     public ContactData withEmail(String email) {
         this.email = email;
+        return this;
+    }
+    public ContactData withMobile(String mobile) {
+        this.mobile = mobile;
         return this;
     }
 
@@ -163,4 +172,6 @@ public class ContactData implements Comparable<ContactData>{
         return Integer.valueOf(this.ID).compareTo(Integer.valueOf(other.ID));
 
     }
+
+
 }
