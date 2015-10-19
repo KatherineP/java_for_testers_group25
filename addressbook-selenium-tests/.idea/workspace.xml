@@ -4,10 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/src/frameWork/ContactHelper.java" line="66" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf1ac3a6-6913-44f2-a098-75195f8cac5d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactDataGenerator.java" afterPath="$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactDataGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/tests/GroupTests/GroupDataGenerator.java" afterPath="$PROJECT_DIR$/src/com/example/tests/GroupTests/GroupDataGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/tests/GroupTests/NonEmptyGroupCreationTest.java" afterPath="$PROJECT_DIR$/src/com/example/tests/GroupTests/NonEmptyGroupCreationTest.java" />
+    <list default="true" id="cf1ac3a6-6913-44f2-a098-75195f8cac5d" name="Default" comment="contacts.xml">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contacts.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/temp-testng-customsuite.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactCreationTest.java" afterPath="$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactCreationTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="addressbook-selenium-tests.iws" />
@@ -34,34 +34,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ContactData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1334" max-vertical-offset="2686">
-              <caret line="99" column="5" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GroupDataGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/tests/GroupTests/GroupDataGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="1819">
+            <state vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="1819">
               <caret line="63" column="71" selection-start-line="63" selection-start-column="71" selection-end-line="63" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupModificationTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/tests/GroupTests/GroupModificationTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -90,16 +70,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="groups.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="groups.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/groups.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="272">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
           <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="temp-testng-customsuite.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/temp-testng-customsuite.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24637681" vertical-offset="0" max-vertical-offset="621">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -137,7 +127,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactCreationTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="935">
-              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,11 +177,11 @@
         <option value="$PROJECT_DIR$/ie.properties" />
         <option value="$PROJECT_DIR$/src/com/example/tests/TestBase.java" />
         <option value="$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactData.java" />
-        <option value="$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactCreationTest.java" />
         <option value="$PROJECT_DIR$/contacts.txt" />
         <option value="$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactDataGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/example/tests/GroupTests/GroupDataGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/example/tests/GroupTests/NonEmptyGroupCreationTest.java" />
+        <option value="$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactCreationTest.java" />
       </list>
     </option>
   </component>
@@ -237,6 +227,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="addressbook-selenium-tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="addressbook-selenium-tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="selenium-server-standalone-2.47.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -388,7 +396,7 @@
       <recent name="com.example.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.NonEmptyGroupCreationTest">
+  <component name="RunManager" selected="Application.ContactDataGenerator">
     <configuration default="false" name="GroupDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -420,7 +428,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.example.tests.ContactTests.ContactDataGenerator" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="3 contacts.txt csv" />
+      <option name="PROGRAM_PARAMETERS" value="3 contacts.xml xml" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -429,41 +437,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="addressbook-selenium-tests" />
       <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="GroupRemovalTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.example.tests.GroupTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="addressbook-selenium-tests" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="com.example.tests.GroupTests" />
-      <option name="MAIN_CLASS_NAME" value="com.example.tests.GroupTests.GroupRemovalTests" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -531,6 +504,36 @@
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" value="" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="$PROJECT_DIR$/temp-testng-customsuite.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="addressbook-selenium-tests" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/temp-testng-customsuite.xml" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <envs />
       <properties />
       <listeners />
@@ -910,17 +913,17 @@
       <item index="2" class="java.lang.String" itemvalue="TestNG.ContactCreationTest" />
       <item index="3" class="java.lang.String" itemvalue="TestNG.ContactRemovalTests" />
       <item index="4" class="java.lang.String" itemvalue="TestNG.ContactModificationTests" />
-      <item index="5" class="java.lang.String" itemvalue="TestNG.GroupRemovalTests" />
-      <item index="6" class="java.lang.String" itemvalue="TestNG.GroupCreationTest" />
-      <item index="7" class="java.lang.String" itemvalue="TestNG.NonEmptyGroupCreationTest" />
+      <item index="5" class="java.lang.String" itemvalue="TestNG.GroupCreationTest" />
+      <item index="6" class="java.lang.String" itemvalue="TestNG.NonEmptyGroupCreationTest" />
+      <item index="7" class="java.lang.String" itemvalue="TestNG.C:/Users/Alex/Documents/GitHub/java_for_testers_group25/addressbook-selenium-tests/temp-testng-customsuite.xml" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.NonEmptyGroupCreationTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ContactDataGenerator" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GroupDataGenerator" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.GroupCreationTest" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.GroupRemovalTests" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ContactDataGenerator" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GroupDataGenerator" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.C:/Users/Alex/Documents/GitHub/java_for_testers_group25/addressbook-selenium-tests/temp-testng-customsuite.xml" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.NonEmptyGroupCreationTest" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.GroupCreationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -966,7 +969,7 @@
       <workItem from="1444815426965" duration="3379000" />
       <workItem from="1444987244625" duration="3340000" />
       <workItem from="1445171549080" duration="6680000" />
-      <workItem from="1445239181125" duration="8583000" />
+      <workItem from="1445239181125" duration="12201000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1440156216504</created>
@@ -1130,11 +1133,17 @@
       <option name="project" value="LOCAL" />
       <updated>1445248350088</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="contacts.xml">
+      <created>1445253046409</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1445253046409</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170818000" />
+    <option name="totallyTimeSpent" value="174436000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1556,16 +1565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactCreationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="935">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactRemovalTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
@@ -1600,16 +1599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/tests/GroupTests/GroupDataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="1819">
-          <caret line="63" column="71" selection-start-line="63" selection-start-column="71" selection-end-line="63" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/tests/GroupTests/NonEmptyGroupCreationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="110" max-vertical-offset="731">
@@ -1629,6 +1618,34 @@
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/tests/ContactTests/ContactCreationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="935">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/tests/GroupTests/GroupDataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="1819">
+          <caret line="63" column="71" selection-start-line="63" selection-start-column="71" selection-end-line="63" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp-testng-customsuite.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24637681" vertical-offset="0" max-vertical-offset="621">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
