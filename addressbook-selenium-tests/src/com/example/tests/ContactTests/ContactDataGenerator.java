@@ -1,8 +1,5 @@
 package com.example.tests.ContactTests;
 
-
-
-import com.example.tests.GroupTests.GroupData;
 import com.thoughtworks.xstream.XStream;
 
 import java.io.*;
@@ -10,9 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by Alex on 18.10.2015.
- */
 public class ContactDataGenerator {
     public static void main(String [] args) throws IOException {
 
