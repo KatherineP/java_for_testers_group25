@@ -3,7 +3,7 @@ package com.example.tests.ContactTests;
 import com.example.tests.TestBase;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-//import static com.example.tests.ContactTests.ContactDataGenerator.loadContactsFromXmlFile;
+import static com.example.tests.ContactTests.ContactDataGenerator.loadContactsFromXmlFile;
 import static com.example.tests.ContactTests.ContactDataGenerator.loadContactsFromCsvFile;
 
 import static org.testng.Assert.assertEquals;
@@ -17,8 +17,8 @@ public class ContactCreationTest extends TestBase {
 
     @DataProvider
     public Iterator<Object[]> contactsFromFile() throws IOException {
-        return wrapContactsForDataProvider(loadContactsFromCsvFile(new File("contacts.txt"))).iterator();
-        //return wrapContactsForDataProvider(loadContactsFromXmlFile(new File("contacts.xml"))).iterator();
+        //return wrapContactsForDataProvider(loadContactsFromCsvFile(new File("contacts.txt"))).iterator();
+        return wrapContactsForDataProvider(loadContactsFromXmlFile(new File("contacts.xml"))).iterator();
     }
 
 

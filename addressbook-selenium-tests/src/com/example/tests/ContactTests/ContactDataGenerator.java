@@ -3,6 +3,7 @@ package com.example.tests.ContactTests;
 
 
 import com.example.tests.GroupTests.GroupData;
+import com.thoughtworks.xstream.XStream;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -38,7 +39,17 @@ public class ContactDataGenerator {
     }
 
     private static void saveContactsToXmlFile(List<ContactData> contacts, File file) throws IOException{
-
+        XStream xStream = new XStream();
+        xStream.alias("contact", ContactData.class);
+        String xml = xStream.toXML(contacts);
+        FileWriter fileWriter = new FileWriter(file);
+        fileWriter.write(xml);
+        fileWriter.close();
+    }
+    public static List<ContactData> loadContactsFromXmlFile(File file) {
+        XStream xStream = new XStream();
+        xStream.alias("contact", ContactData.class);
+        return (List<ContactData>) xStream.fromXML(file);
     }
 
     private static void saveContactsToCsvFile(List<ContactData> contacts, File file) throws IOException{
