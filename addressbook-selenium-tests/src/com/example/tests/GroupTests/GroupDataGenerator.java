@@ -62,7 +62,6 @@ return (List<GroupData>) xStream.fromXML(file);
         List<GroupData> list = new ArrayList<GroupData>();
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
-        bufferedReader.readLine();
         String line = bufferedReader.readLine();
         while(line != null){
            String[] part =  line.split(",");

@@ -59,7 +59,6 @@ public class ContactDataGenerator {
         List<ContactData> list = new ArrayList<ContactData>();
         FileReader reader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(reader);
-        bufferedReader.readLine();
         String line = bufferedReader.readLine();
         while (line != null){
            String[] part = line.split(",");

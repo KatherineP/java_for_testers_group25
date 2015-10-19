@@ -16,8 +16,8 @@ public class NonEmptyGroupCreationTest extends  TestBase{
 
     @DataProvider
     public Iterator<Object[]> groupsFromFile() throws IOException {
-        //return wrapGroupsForDataProvider(loadGroupsFromCsvFile(new File("groups.txt"))).iterator();
-        return wrapGroupsForDataProvider(loadGroupsFromXmlFile(new File("groups.xml"))).iterator();
+        return wrapGroupsForDataProvider(loadGroupsFromCsvFile(new File("groups.txt"))).iterator();
+        //return wrapGroupsForDataProvider(loadGroupsFromXmlFile(new File("groups.xml"))).iterator();
     }
 
 
